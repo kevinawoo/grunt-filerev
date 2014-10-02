@@ -51,6 +51,11 @@ module.exports = function (grunt) {
         },
         src: ['test/fixtures/file.png', 'test/fixtures/another.png'],
         dest: 'test/tmp'
+      },
+      transversing: {
+        expand: true,
+        src: ['test/fixtures/{,**}/*.js'],
+        dest: 'test/tmp/transverse'
       }
     },
     simplemocha: {
